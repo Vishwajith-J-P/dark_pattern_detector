@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkLens</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    width: 360px;
+    min-height: 200px;
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #1e293b;
+}
+.logo {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #38bdf8;
+}
+.logo span { color: white; }
+
+#scan-btn {
+    background: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+#scan-btn:hover    { background: #0ea5e9; }
+#scan-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* States */
+#state-idle, #state-loading, #state-results, #state-error {
+    display: none;
+    padding: 20px 16px;
+}
+#state-idle.active, #state-loading.active,
+#state-results.active, #state-error.active { display: block; }
+
+/* Idle */
+#state-idle {
+    text-align: center;
+    padding: 32px 16px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Loading */
+#state-loading { text-align: center; padding: 32px 16px; }
+.spinner {
+    width: 32px; height: 32px;
+    border: 3px solid #1e293b;
+    border-top-color: #38bdf8;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { color: #94a3b8; font-size: 0.82rem; }
+
+/* Score */
+.score-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 14px;
+}
+.score-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1;
+    min-width: 72px;
+    text-align: center;
+}
+.score-low    { color: #22c55e; }
+.score-medium { color: #f59e0b; }
+.score-high   { color: #ef4444; }
+.score-info {}
+.score-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+.risk-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.risk-low    { background: rgba(34,197,94,0.15);  color: #22c55e; }
+.risk-medium { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.risk-high   { background: rgba(239,68,68,0.15);  color: #ef4444; }
+.score-sub { font-size: 0.72rem; color: #94a3b8; }
+
+/* Timer alert */
+.timer-alert {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    color: #ef4444;
+    line-height: 1.5;
+}
+.timer-alert strong { display: block; margin-bottom: 3px; }
+
+/* Section label */
+.sec-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+/* Pattern chips */
+.pattern-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+.pattern-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e293b;
+    border-radius: 6px;
+    padding: 7px 10px;
+}
+.pattern-left { display: flex; align-items: center; gap: 8px; }
+.pattern-dot  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.pattern-name { font-size: 0.8rem; font-weight: 500; text-transform: capitalize; }
+.pattern-bar-wrap {
+    flex: 1;
+    height: 3px;
+    background: #0f172a;
+    border-radius: 2px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.pattern-bar { height: 100%; border-radius: 2px; transition: width 0.4s; }
+.pattern-pct { font-size: 0.72rem; color: #94a3b8; min-width: 30px; text-align: right; }
+
+/* Compounds */
+.compound-list { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.compound-item {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 0.75rem;
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.compound-boost {
+    font-weight: 700;
+    font-size: 0.7rem;
+    background: rgba(245,158,11,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Cards */
+.card-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.exp-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 10px 12px;
+    border-left: 3px solid #38bdf8;
+}
+.exp-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.exp-title { font-size: 0.82rem; font-weight: 700; }
+.exp-conf  { font-size: 0.7rem; color: #38bdf8; font-weight: 700; }
+.exp-desc  { font-size: 0.75rem; color: #94a3b8; line-height: 1.5; margin-bottom: 5px; }
+.exp-bias  { font-size: 0.7rem; color: #94a3b8; }
+.exp-bias strong { color: #f8fafc; }
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid #1e293b;
+}
+.btn-ghost {
+    flex: 1;
+    background: none;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    border-radius: 6px;
+    padding: 7px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.btn-ghost:hover { border-color: #38bdf8; color: #38bdf8; }
+
+/* Error */
+#state-error {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+.error-icon { font-size: 2rem; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">Dark<span>Lens</span></div>
+    <button id="scan-btn">Scan Page</button>
+</div>
+
+<div id="state-idle" class="active">
+    Click <strong>Scan Page</strong> to detect dark patterns on this website.
+</div>
+
+<div id="state-loading">
+    <div class="spinner"></div>
+    <div class="loading-text" id="loading-text">Extracting elements...</div>
+</div>
+
+<div id="state-results" style="padding:14px 16px;max-height:520px;overflow-y:auto;">
+    <div class="score-row">
+        <div class="score-number" id="score-number">--</div>
+        <div class="score-info">
+            <div class="score-label">Manipulation Score</div>
+            <div class="risk-badge" id="risk-badge">--</div>
+            <div class="score-sub" id="score-sub">-- patterns detected</div>
+        </div>
+    </div>
+
+    <div id="timer-section" style="display:none"></div>
+
+    <div id="patterns-section" style="margin-bottom:14px">
+        <div class="sec-label">Pattern Breakdown</div>
+        <div class="pattern-list" id="pattern-list"></div>
+    </div>
+
+    <div id="compounds-section" style="display:none;margin-bottom:14px">
+        <div class="sec-label">Compound Stacks</div>
+        <div class="compound-list" id="compound-list"></div>
+    </div>
+
+    <div id="cards-section">
+        <div class="sec-label">Detected Patterns</div>
+        <div class="card-list" id="card-list"></div>
+    </div>
+</div>
+
+<div id="state-error">
+    <div class="error-icon">⚠</div>
+    <div id="error-text">Could not connect to DarkLens server.<br>Make sure the FastAPI server is running on port 8000.</div>
+</div>
+
+<div class="actions" id="actions" style="display:none">
+    <button class="btn-ghost" id="clear-btn">Clear Highlights</button>
+    <button class="btn-ghost" id="rescan-btn">Rescan</button>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

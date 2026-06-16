@@ -1,0 +1,181 @@
+text,label
+"No thanks, I don't want to save money",confirmshaming
+"I'd rather pay full price",confirmshaming
+"No thanks, I prefer to stay uninformed",confirmshaming
+"Skip the deal, I like spending more",confirmshaming
+"No thanks, I don't care about my health",confirmshaming
+"No thanks, I enjoy wasting time",confirmshaming
+"I'd rather not save 30% today",confirmshaming
+"No thanks, I don't want free shipping",confirmshaming
+"Skip — I don't mind missing out",confirmshaming
+"No thanks, I like paying more for less",confirmshaming
+"I'll pass, deals aren't for me",confirmshaming
+"No thanks, I prefer the expensive option",confirmshaming
+"I don't want exclusive member pricing",confirmshaming
+"No thanks, I'm happy losing money",confirmshaming
+"I'd rather not get cashback",confirmshaming
+"No thanks, I don't want a discount",confirmshaming
+"Skip offer — I prefer full price",confirmshaming
+"I don't want to save on my order",confirmshaming
+"No thanks, I'll pay more elsewhere",confirmshaming
+"I'd rather not join and save",confirmshaming
+"No thanks, I don't need a better deal",confirmshaming
+"I'm fine overpaying, no thanks",confirmshaming
+"No thanks, I enjoy high prices",confirmshaming
+"I don't want this limited offer",confirmshaming
+"No thanks, savings aren't important to me",confirmshaming
+"I'd rather miss the sale",confirmshaming
+"No, I don't want to be a smart shopper",confirmshaming
+"No thanks, I don't want rewards points",confirmshaming
+"I'll decline, I hate discounts",confirmshaming
+"No, keep charging me full price",confirmshaming
+"Taxes and fees calculated at checkout",hidden_costs
+"Additional service fee applied at payment",hidden_costs
+"Resort fee not included in displayed price",hidden_costs
+"Booking fee added at final step",hidden_costs
+"Convenience charge applied at checkout",hidden_costs
+"Shipping cost revealed after entering card details",hidden_costs
+"Handling fee added at final payment screen",hidden_costs
+"Price shown excludes mandatory insurance",hidden_costs
+"Processing fee applied at checkout",hidden_costs
+"Additional charges will appear at payment",hidden_costs
+"Fuel surcharge added at booking confirmation",hidden_costs
+"Platform fee not included in listed price",hidden_costs
+"GST and packaging charges added at checkout",hidden_costs
+"Delivery charges calculated after address entry",hidden_costs
+"Final price may differ due to applicable taxes",hidden_costs
+"Service charge added to your total at payment",hidden_costs
+"Regulatory fee applied automatically at checkout",hidden_costs
+"Installation charges added separately at billing",hidden_costs
+"Mandatory tip included at payment screen",hidden_costs
+"Currency conversion fee applied at checkout",hidden_costs
+"Admin fee revealed only at final payment step",hidden_costs
+"Subtotal does not include applicable fees",hidden_costs
+"Extra charges apply based on your location",hidden_costs
+"Order processing fee added before confirmation",hidden_costs
+"Packaging fee not shown in product price",hidden_costs
+"Customs duty applied at checkout for your region",hidden_costs
+"Final amount includes undisclosed platform charges",hidden_costs
+"Price excludes mandatory extended warranty fee",hidden_costs
+"COD charge applied at payment selection",hidden_costs
+"Restocking fee deducted from refund amount",hidden_costs
+"Your free trial will automatically convert to a paid subscription",forced_continuity
+"Cancel anytime but we will keep charging until you do",forced_continuity
+"Membership renews automatically every month",forced_continuity
+"Free for 7 days then Rs 499 per month unless cancelled",forced_continuity
+"Subscription continues after trial period ends",forced_continuity
+"You will be charged automatically after your free period",forced_continuity
+"Recurring billing begins immediately after trial",forced_continuity
+"Plan auto-renews unless cancelled 24 hours before renewal",forced_continuity
+"Free trial requires credit card and auto-renews",forced_continuity
+"Monthly charges begin after your introductory period",forced_continuity
+"Unsubscribe anytime — charges continue until you do",forced_continuity
+"Annual subscription auto-renews at full price",forced_continuity
+"Your card will be charged automatically each month",forced_continuity
+"Trial ends and paid subscription begins automatically",forced_continuity
+"Membership fee debited automatically on renewal date",forced_continuity
+"Premium access continues and renews without notice",forced_continuity
+"Billing cycle restarts automatically each period",forced_continuity
+"Subscription will not stop unless explicitly cancelled",forced_continuity
+"Auto-renewal is enabled by default on your account",forced_continuity
+"You will not receive a reminder before renewal charge",forced_continuity
+"Plan continues at standard rate after promotional period",forced_continuity
+"Free access ends and charges apply without action",forced_continuity
+"Default billing resumes after trial — cancel to stop",forced_continuity
+"Your account will be charged on the next billing date",forced_continuity
+"Renewal charge processed automatically each cycle",forced_continuity
+"Subscription stays active until you manually cancel",forced_continuity
+"Trial converts to full membership automatically",forced_continuity
+"We will charge your saved payment method on renewal",forced_continuity
+"Access continues and payment is deducted automatically",forced_continuity
+"Standard charges apply automatically post-trial",forced_continuity
+"Sponsored",disguised_ads
+"Ad",disguised_ads
+"Promoted listing styled to match organic results",disguised_ads
+"Featured — paid placement",disguised_ads
+"Sponsored product recommendation",disguised_ads
+"Promoted by seller",disguised_ads
+"Ad — appears as a regular search result",disguised_ads
+"Paid placement disguised as editorial recommendation",disguised_ads
+"Sponsored content styled as genuine review",disguised_ads
+"Advertiser-funded recommendation",disguised_ads
+"Promoted deal — not editorially selected",disguised_ads
+"Paid feature — not based on rating or relevance",disguised_ads
+"Sponsored brand result",disguised_ads
+"Ad content designed to resemble organic listing",disguised_ads
+"Promoted item — seller paid for this placement",disguised_ads
+"Advertisement formatted as user recommendation",disguised_ads
+"Paid result — not the best match for your search",disguised_ads
+"Sponsored placement — may not reflect top quality",disguised_ads
+"Ad disguised as trending product",disguised_ads
+"Promoted content — not based on popularity",disguised_ads
+"Advertiser content mimicking search result format",disguised_ads
+"Paid brand placement in organic feed",disguised_ads
+"Sponsored banner designed to look like site content",disguised_ads
+"Ad formatted identically to non-sponsored listings",disguised_ads
+"Promoted result — relevance not guaranteed",disguised_ads
+"Sponsored item prioritised over better-rated products",disguised_ads
+"Paid listing — appears before organic results",disguised_ads
+"Advertisement styled as customer favourite",disguised_ads
+"Promoted product — not selected by algorithm",disguised_ads
+"Sponsored placement — seller paid to appear here",disguised_ads
+"Price per unit not shown",price_comparison_prevention
+"Bundle price only — individual pricing unavailable",price_comparison_prevention
+"Discount shown without original price reference",price_comparison_prevention
+"Sold in packs — per-item price hidden",price_comparison_prevention
+"Compare at price removed from listing",price_comparison_prevention
+"Unit price not displayed for this product",price_comparison_prevention
+"Bulk pricing only — no per-unit breakdown",price_comparison_prevention
+"Price per gram not shown",price_comparison_prevention
+"Cost per serving not indicated",price_comparison_prevention
+"No per-unit pricing available for comparison",price_comparison_prevention
+"Price per ml not displayed",price_comparison_prevention
+"Subscription price shown without per-item equivalent",price_comparison_prevention
+"Total pack price only — unit cost not shown",price_comparison_prevention
+"Price comparison removed from product page",price_comparison_prevention
+"MRP per piece not displayed",price_comparison_prevention
+"Price per kg not available",price_comparison_prevention
+"Pack size changed — price per unit now hidden",price_comparison_prevention
+"Combo price shown — individual item price not available",price_comparison_prevention
+"Price structure makes comparison with competitors difficult",price_comparison_prevention
+"Pricing shown in non-standard units to obscure comparison",price_comparison_prevention
+"Different pack sizes shown without unit price normalisation",price_comparison_prevention
+"Price displayed per box — not per tablet or unit",price_comparison_prevention
+"Shrinkflation — price unchanged but unit size reduced",price_comparison_prevention
+"No standardised price shown for comparison",price_comparison_prevention
+"Volume pricing shown without per-unit equivalent",price_comparison_prevention
+"Promotional price displayed without base price reference",price_comparison_prevention
+"Confusing price format prevents easy comparison",price_comparison_prevention
+"Pricing changed to obscure cost increase",price_comparison_prevention
+"Non-comparable unit shown to prevent price matching",price_comparison_prevention
+"Unusual quantity bundle — per item cost not shown",price_comparison_prevention
+"Pre-selected newsletter subscription checkbox",trick_questions
+"Yes I want to receive marketing emails pre-ticked",trick_questions
+"Uncheck this box if you do not want to not receive offers",trick_questions
+"By continuing you agree to share data with partners",trick_questions
+"Optional travel insurance added by default",trick_questions
+"Pre-ticked box for promotional SMS alerts",trick_questions
+"Opt-out checkbox hidden in terms and conditions",trick_questions
+"Double negative opt-out — uncheck to not unsubscribe",trick_questions
+"Default yes to third-party data sharing",trick_questions
+"Insurance added to cart automatically",trick_questions
+"Express delivery pre-selected at higher cost",trick_questions
+"Gift wrapping added by default — uncheck to remove",trick_questions
+"Priority processing pre-enabled at extra charge",trick_questions
+"Extended warranty added automatically to order",trick_questions
+"Pre-checked box agrees to future marketing contact",trick_questions
+"Protection plan added to cart without selection",trick_questions
+"Confusing checkbox — tick to opt out of offers",trick_questions
+"Donation to charity pre-added at checkout",trick_questions
+"Carbon offset fee pre-selected at payment",trick_questions
+"Travel protection auto-added before payment",trick_questions
+"Opt-in pre-selected for partner email sharing",trick_questions
+"SMS alerts enabled by default — untick to disable",trick_questions
+"Pre-filled yes to loyalty programme enrolment",trick_questions
+"Misleading checkbox wording causes unintended opt-in",trick_questions
+"Default selection benefits the company not the user",trick_questions
+"Tick to confirm you do not wish to unsubscribe",trick_questions
+"Pre-ticked box for paid add-on service",trick_questions
+"Auto-added accidental damage cover at checkout",trick_questions
+"Confusingly worded consent checkbox",trick_questions
+"Subscription to paid tier pre-selected by default",trick_questions

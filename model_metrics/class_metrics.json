@@ -1,0 +1,62 @@
+{
+    "urgency": {
+        "precision": 97.83,
+        "recall": 95.74,
+        "f1": 96.77,
+        "support": 47
+    },
+    "scarcity": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 136
+    },
+    "confirmshaming": {
+        "precision": 100.0,
+        "recall": 12.5,
+        "f1": 22.22,
+        "support": 8
+    },
+    "hidden_costs": {
+        "precision": 90.0,
+        "recall": 90.0,
+        "f1": 90.0,
+        "support": 10
+    },
+    "forced_continuity": {
+        "precision": 100.0,
+        "recall": 88.89,
+        "f1": 94.12,
+        "support": 9
+    },
+    "misdirection": {
+        "precision": 85.45,
+        "recall": 88.68,
+        "f1": 87.04,
+        "support": 53
+    },
+    "price_comparison_prevention": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 8
+    },
+    "disguised_ads": {
+        "precision": 100.0,
+        "recall": 87.5,
+        "f1": 93.33,
+        "support": 8
+    },
+    "trick_questions": {
+        "precision": 100.0,
+        "recall": 75.0,
+        "f1": 85.71,
+        "support": 8
+    },
+    "social_proof_manipulation": {
+        "precision": 100.0,
+        "recall": 98.41,
+        "f1": 99.2,
+        "support": 63
+    }
+}

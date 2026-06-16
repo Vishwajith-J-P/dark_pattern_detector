@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "DarkLens: Multi-Modal Dark Pattern Auditor",
+  "version": "1.0",
+  "description": "Audits pages for deceptive text intent, visual layouts, and behavioral codes.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webNavigation",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        // "dom_extractor.js",
+        // "timer_tracker.js",
+        // "image_extractor.js",
+        // "highlighter.js",
+        "content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

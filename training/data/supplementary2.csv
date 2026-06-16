@@ -1,0 +1,61 @@
+text,label
+"Don't miss out — but no thanks if savings aren't your thing",confirmshaming
+"Decline this offer because you love overpaying",confirmshaming
+"Pass on the deal — clearly you don't value your money",confirmshaming
+"Not interested in joining millions of smart savers",confirmshaming
+"I'll skip — discounts aren't something I care about",confirmshaming
+"No thanks to better prices — I prefer the expensive route",confirmshaming
+"Reject savings because why not pay more",confirmshaming
+"I choose to ignore this exclusive offer",confirmshaming
+"Not for me — I enjoy full-price shopping",confirmshaming
+"Decline — I don't mind wasting money",confirmshaming
+"Estimated import fees deposited at checkout",hidden_costs
+"Price does not include local taxes",hidden_costs
+"Surcharge applied for selected payment method",hidden_costs
+"Rs 99 packaging fee added to your order",hidden_costs
+"Handling charges not reflected in listed price",hidden_costs
+"Dynamic pricing fee added at final step",hidden_costs
+"Service tax applied on total order value",hidden_costs
+"Mandatory donation added before payment",hidden_costs
+"Small order fee applied for orders below minimum",hidden_costs
+"Cash on delivery charges applied at checkout",hidden_costs
+"We will bill you automatically each month going forward",forced_continuity
+"Charges begin without notice after free period",forced_continuity
+"Your subscription silently renews each year",forced_continuity
+"Paid access begins immediately when trial expires",forced_continuity
+"No reminder sent before next billing cycle",forced_continuity
+"Renewal happens automatically — you must cancel to stop it",forced_continuity
+"Your saved card gets charged on renewal date",forced_continuity
+"Premium plan continues and bills monthly unless stopped",forced_continuity
+"Trial seamlessly transitions to paid without confirmation",forced_continuity
+"Automatic charge on anniversary of signup",forced_continuity
+"Recommended for you — sponsored",disguised_ads
+"Top result — paid listing",disguised_ads
+"Editor's choice — advertiser funded",disguised_ads
+"Most popular — promoted content",disguised_ads
+"Customers also viewed — sponsored placement",disguised_ads
+"Trending now — paid feature",disguised_ads
+"Best seller — advertiser selected",disguised_ads
+"Staff pick — sponsored by brand",disguised_ads
+"Featured deal — not organically ranked",disguised_ads
+"Highlighted result — seller paid for visibility",disguised_ads
+"Per unit cost not available for this item",price_comparison_prevention
+"Price shown for whole pack only",price_comparison_prevention
+"No per-piece pricing displayed",price_comparison_prevention
+"Cost per dose not indicated on listing",price_comparison_prevention
+"Pricing structure prevents direct comparison",price_comparison_prevention
+"Pack contents and per-unit price not shown",price_comparison_prevention
+"Non-standard sizing makes price comparison difficult",price_comparison_prevention
+"Price per litre not available",price_comparison_prevention
+"Unusual bundle size obscures true cost",price_comparison_prevention
+"Item sold in quantities that prevent easy comparison",price_comparison_prevention
+"By clicking continue you accept email marketing",trick_questions
+"Opt out by leaving this box unchecked — which is checked by default",trick_questions
+"We have pre-selected the best plan for you",trick_questions
+"Uncheck if you do not want to receive offers — box is ticked",trick_questions
+"Default selection includes paid protection plan",trick_questions
+"Add-on pre-selected — remove before checkout to avoid charge",trick_questions
+"Agree to terms includes consent to marketing",trick_questions
+"Pre-filled form includes newsletter signup",trick_questions
+"Proceeding confirms you accept partner communications",trick_questions
+"Checkbox pre-ticked for express paid delivery",trick_questions
