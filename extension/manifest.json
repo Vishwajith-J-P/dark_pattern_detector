@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "DarkLens: Multi-Modal Dark Pattern Auditor",
+  "name": "Dark Pattern Detector: Multi-Modal Dark Pattern Auditor",
   "version": "1.0",
   "description": "Audits pages for deceptive text intent, visual layouts, and behavioral codes.",
   "permissions": [

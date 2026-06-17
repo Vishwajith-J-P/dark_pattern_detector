@@ -11,7 +11,7 @@ import re
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 
-app = FastAPI(title="DarkLens Detection Engine")
+app = FastAPI(title="Dark Pattern Detection Engine")
 
 # Enable CORS so your local browser extension can seamlessly call your backend
 app.add_middleware(

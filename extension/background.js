@@ -56,7 +56,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 }
 
             } catch (error) {
-                console.error("❌ DarkLens API Connection Error:", error);
+                console.error("❌ Dark Pattern Detector API Connection Error:", error);
                 sendResponse({ ok: false, error: `Backend Pipeline Down: ${error.message}` });
             }
         })();

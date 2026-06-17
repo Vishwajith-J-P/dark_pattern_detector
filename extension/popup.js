@@ -92,6 +92,33 @@ function renderPatterns(perPattern) {
     });
 }
 
+
+function renderCards(cards) {
+    const list =
+        document.getElementById("card-list");
+
+    if (!list) return;
+
+    list.innerHTML = "";
+
+    if (!cards || cards.length === 0) {
+        list.innerHTML =
+            "<div>No dark patterns detected</div>";
+        return;
+    }
+
+    cards.forEach(card => {
+        list.innerHTML += `
+            <div class="pattern-card">
+                <div class="pattern-title">
+                    ${card.display_name}
+                </div>
+            </div>
+        `;
+    });
+}
+
+
 // =====================================================================
 // 4. MAIN MULTI-MODAL AUDIT COORDINATOR
 // =====================================================================
@@ -106,7 +133,7 @@ async function runScan() {
         // 1. Fetch target tab context
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         if (!tab || !tab.id || tab.url.startsWith('chrome://') || tab.url.startsWith('edge://') || tab.url.startsWith('brave://')) {
-            throw new Error('DarkLens cannot run audits on internal browser configurations. Please try an active shop site.');
+            throw new Error('Dark Pattern Detector cannot run audits on internal browser configurations. Please try an active shop site.');
         }
 
         setLoading('Analysing DOM structure...');
@@ -192,7 +219,7 @@ async function runScan() {
         showState('results');
 
     } catch (err) {
-        console.error("DarkLens Pipeline Execution Halt:", err);
+        console.error("Dark Pattern Detector Pipeline Execution Halt:", err);
         const errorText = document.getElementById('error-text');
         if (errorText) errorText.textContent = err.message;
         showState('error');
@@ -208,7 +235,7 @@ window.runScan = runScan;
 // 5. ASYNCHRONOUS SECURE EVENT LIFECYCLE HANDLERS (ANTI-CSP)
 // =====================================================================
 window.onload = function() {
-    console.log("🧩 DarkLens Popup DOM loaded. Attaching secure listeners...");
+    console.log("🧩 Dark Pattern Detector Popup DOM loaded. Attaching secure listeners...");
     
     const scanBtn = document.getElementById('scan-btn');
     if (scanBtn) {

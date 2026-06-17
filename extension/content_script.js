@@ -1,11 +1,11 @@
-console.log("✅ DarkLens Content Script Loaded");
+console.log("✅ Dark Pattern Detector Content Script Loaded");
 
 // ======================================================
 // 1. DOM FEATURE EXTRACTION ENGINE
 // ======================================================
 
 function extractDOMFeatures() {
-    console.log("🔍 DarkLens Engine: Scanning active viewport DOM...");
+    console.log("🔍 Dark Pattern Detector Engine: Scanning active viewport DOM...");
 
     const extractedElements = [];
 
@@ -195,7 +195,7 @@ function extractDOMFeatures() {
         });
     });
 
-    console.log(`📊 DarkLens Engine: Captured ${extractedElements.length} filtered candidates`);
+    console.log(`📊 Dark Pattern Detector: Captured ${extractedElements.length} filtered candidates`);
     console.log(extractedElements.slice(0, 50).map(e => ({ tag: e.tag, text: e.text })));
     extractedElements.sort((a, b) => b.priority - a.priority);
 
@@ -211,7 +211,7 @@ function clearHighlights() {
         .querySelectorAll(".darklens-overlay")
         .forEach(el => el.remove());
 
-    console.log("🧹 DarkLens overlays cleared");
+    console.log("🧹 Dark Pattern Detector overlays cleared");
 }
 
 function renderHighlights(results) {
