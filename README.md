@@ -36,19 +36,29 @@ Dark Pattern Detector is a Chromium-based web extension that detects potentially
 
 ## Running the Project
 
+### Cloning the Repository
+
+You can clone this repo by using the command
+```bash
+git clone https://github.com/Vishwajith-J-P/dark_pattern_detector.git
+```
+
 ### Creating a Virtual Environemnt
 
 Although it's completely optional, it is recommended to install all the python packages in an environment
 
 #### Using Conda
-
+```bash
 conda create -n dpd python=3.11
 conda activate dpd
+```
 
 #### Using Python venv
 
+```bash
 python -m venv dpd
 dpd\Scripts\activate
+```
 
 ### Start the Backend
 
